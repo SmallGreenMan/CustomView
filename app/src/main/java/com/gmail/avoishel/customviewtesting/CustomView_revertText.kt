@@ -9,4 +9,17 @@ class CustomView_revertText @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defaultAttrs: Int = 0
 ) : AppCompatTextView(context, attrs, defaultAttrs) {
+    init {
+        context.theme.obtainStyledAttributes(attrs, R.styleable.CustomView_revertText, 0, 0).apply {
+            try {
+                val shouldRevertText = getBoolean(R.styleable.CustomView_revertText_revertText, false)
+                if (shouldRevertText){
+                    val revertedText = text.reversed()
+                    text = revertedText
+                }
+            } finally {
+                recycle()
+            }
+        }
+    }
 }
