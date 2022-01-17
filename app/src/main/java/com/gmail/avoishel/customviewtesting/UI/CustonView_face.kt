@@ -20,6 +20,8 @@ class CustonView_face (
             strokeWidth = 30F
         }
 
+
+
     override fun onDraw(canvas: Canvas) {
         canvas.apply {
             val centerX = (width/2).toFloat()
