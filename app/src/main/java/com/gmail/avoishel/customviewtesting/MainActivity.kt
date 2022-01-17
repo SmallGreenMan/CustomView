@@ -3,6 +3,7 @@ package com.gmail.avoishel.customviewtesting
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.gmail.avoishel.customviewtesting.UI.CustomView_SurfaseView
 import com.gmail.avoishel.customviewtesting.UI.CustomView_revertText
 import com.gmail.avoishel.customviewtesting.UI.CustonView_face
 
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
         setContentView(CustonView_face(this))
+        //setContentView(CustomView_SurfaseView(this))
 
         //textviewHelloWorld = findViewById(R.id.helloWorldTextView)
     }
