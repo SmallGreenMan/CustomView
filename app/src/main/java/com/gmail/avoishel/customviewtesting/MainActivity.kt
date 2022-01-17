@@ -3,20 +3,24 @@ package com.gmail.avoishel.customviewtesting
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.gmail.avoishel.customviewtesting.UI.CustomView_revertText
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var textviewHelloWorld: TextView
+    lateinit var textviewHelloWorld: CustomView_revertText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         textviewHelloWorld = findViewById(R.id.helloWorldTextView)
-        //textviewHelloWorld.text
     }
 
     fun revertTextClick(view: android.view.View) {
-        //if (textviewHelloWorld.reve)
+        if (textviewHelloWorld.shouldRevertText == true){
+            textviewHelloWorld.setRevertText(false)
+        } else {
+            textviewHelloWorld.setRevertText(true)
+        }
     }
 }

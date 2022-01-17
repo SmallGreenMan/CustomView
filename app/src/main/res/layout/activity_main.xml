@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.gmail.avoishel.customviewtesting.CustomView_revertText
+    <com.gmail.avoishel.customviewtesting.UI.CustomView_revertText
         android:id="@+id/helloWorldTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
